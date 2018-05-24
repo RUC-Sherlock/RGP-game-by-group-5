@@ -36,7 +36,8 @@ HEADERS += \
     abstract_obj.h \
     live_player.h \
     princess.h \
-    enemy_monster.h
+    enemy_monster.h \
+    constant.h
 
 FORMS += \
         window.ui

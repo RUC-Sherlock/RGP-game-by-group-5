@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.6.1, 2018-05-24T18:39:35. -->
+<!-- Written by QtCreator 4.6.1, 2018-05-24T20:06:47. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -285,8 +285,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Kingdom_Rush_Mixed</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:E:/Desktop/my resources/my_programs/GitHub/homework-by-Ma-Xianzhe/Kingdom_Rush_Mixed/Kingdom_Rush_Mixed.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Kingdom_Rush_Mixed2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:E:/Desktop/my resources/my_programs/GitHub/RGP-game-by-group-5/Kingdom_Rush_Mixed/Kingdom_Rush_Mixed.pro</value>
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Kingdom_Rush_Mixed.pro</value>

@@ -1,6 +1,7 @@
 #ifndef LIVE_PLAYER_H
 #define LIVE_PLAYER_H
 #include "abstract_obj.h"
+#include "constant.h"
 //注意：基类Abstract_obj中的move（）函数和set_Obj_location函数
 //都不要使用，只能使用Abstract_obj中重新定义的move和set_Obj_location
 
@@ -35,6 +36,7 @@ public:
     bool inHurtable_range(const Abstract_obj & obj)const;
     bool inAttack_range(const Live_player & obj)const;
     virtual void setDestination(const QPoint & des);
+    virtual void react(Command cmd)=0;
     virtual ~Live_player(){}
 protected:
     void setMAXHP(int MAXHP) {_MAXHP=MAXHP;}

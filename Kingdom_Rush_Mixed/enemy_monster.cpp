@@ -15,48 +15,48 @@ static const QPoint destination[9][4]=
  {QPoint(900,844),QPoint(630,683),QPoint(605,378),QPoint(0,522)}
 };
 static const char *dir_set[]=
-    {":/enermy_monster/image/enermy_monster/l_walk (1).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (1).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (2).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (2).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (3).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (3).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (4).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (4).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (5).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (5).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (6).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (6).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (7).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (7).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (8).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (8).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (9).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (9).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (10).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (10).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (11).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (11).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (12).png",
-     ":/enermy_monster/image/enermy_monster/l_walk (12).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (1).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (1).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (1).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (2).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (2).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (2).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (3).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (3).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (3).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (4).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (4).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (4).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (5).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (5).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (5).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (6).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (6).png",
-     ":/enermy_monster/image/enermy_monster/l_attack (6).png"
+    {":/enemy_monster/image/enemy_monster/l_walk (1).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (1).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (2).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (2).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (3).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (3).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (4).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (4).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (5).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (5).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (6).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (6).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (7).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (7).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (8).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (8).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (9).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (9).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (10).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (10).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (11).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (11).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (12).png",
+     ":/enemy_monster/image/enemy_monster/l_walk (12).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (1).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (1).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (1).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (2).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (2).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (2).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (3).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (3).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (3).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (4).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (4).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (4).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (5).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (5).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (5).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (6).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (6).png",
+     ":/enemy_monster/image/enemy_monster/l_attack (6).png"
     };
 static const QPoint rlocation=QPoint(72,106);
 static const QPoint rheart=QPoint(72,68);
@@ -68,23 +68,23 @@ static const int img_num=42;
 static const int speed=3;
 static const QPoint des=destination[map1_1][0];
 
-Enermy_far::Enermy_far(int xpos, int ypos):
+Enemy_monster::Enemy_monster(int xpos, int ypos):
     Live_player(QPoint(xpos,ypos),rlocation,rheart,img_num,dir_set,hurtable_range,attack_range,MAXHP,speed,des),
     _condition(l_walk1_1),point_destination(0),_sleep(0){}
 
-Enermy_far::Enermy_far(const QPoint & obj_location):
+Enemy_monster::Enemy_monster(const QPoint & obj_location):
     Live_player(obj_location,rlocation,rheart,img_num,dir_set,hurtable_range,attack_range,MAXHP,speed,des),
     _condition(l_walk1_1),point_destination(0),_sleep(0){}
 
-void Enermy_far::react(Command cmd)
+void Enemy_monster::react(Command cmd)
 {
     if(_sleep%2) return;
     switch(cmd){
-        case Lwalk:
+        case Command::Lwalk:
             if(_condition<=l_walk12_1) _condition=Condition(1+_condition);
             else _condition=l_walk1_1;
             break;
-        case Lattack:
+        case Command::Lattack:
             //if(!isStanding()) return;
             //冰女进入攻击范围后小兵先停下再进攻
             //移动中无法进攻
@@ -103,7 +103,7 @@ void Enermy_far::react(Command cmd)
     }
 }
 
-void Enermy_far::draw(QPainter &p)
+void Enemy_monster::draw(QPainter &p)
 {
     Abstract_obj::draw(p,_condition);
     _sleep=(_sleep+1)%20;

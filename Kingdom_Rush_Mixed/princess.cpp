@@ -53,15 +53,15 @@ bool Princess::isLeft()const
 void Princess::react(Command cmd)
 {
     switch (cmd) {
-    case Lstand:
+    case Command::Lstand:
         if(!isStanding()) return;
         _condition=lstand1;
         break;
-    case Rstand:
+    case Command::Rstand:
         if(!isStanding()) return;
         _condition=rstand1;
         break;
-    case Longattack:
+    case Command::Longattack:
         if(!isStanding()) return;
         //只有静止状态才能发动攻击
         //移动过程中也不行
@@ -70,7 +70,7 @@ void Princess::react(Command cmd)
         else
             _condition=r_longattack1;
         break;//一定要记得加break!!!
-    case Move:
+    case Command::Move:
         if(_condition>=l_longattack1&&_condition<=r_longattack4) return;
         else if(isLeft())
             _condition=lmove1;

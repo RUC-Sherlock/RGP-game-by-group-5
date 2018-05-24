@@ -30,7 +30,7 @@ public:
 private:
     Ui::Window *ui;
     Princess player;
-    Enermy_far stone1;//考虑写个数组
+    Enemy_monster stone1;//考虑写个数组
     QImage _background;
 private slots:
 //    void react(Signal);
