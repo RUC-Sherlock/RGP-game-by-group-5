@@ -37,5 +37,34 @@
         <file>image/enemy_monster/l_walk (10).png</file>
         <file>image/enemy_monster/l_walk (11).png</file>
         <file>image/enemy_monster/l_walk (12).png</file>
+        <file>image/enemy_monster/r_attack1.png</file>
+        <file>image/enemy_monster/r_attack2.png</file>
+        <file>image/enemy_monster/r_attack3.png</file>
+        <file>image/enemy_monster/r_attack4.png</file>
+        <file>image/enemy_monster/r_attack5.png</file>
+        <file>image/enemy_monster/r_attack6.png</file>
+    </qresource>
+    <qresource prefix="/others">
+        <file>image/others/iceball.png</file>
+    </qresource>
+    <qresource prefix="/wolf_lrun">
+        <file>image/wolf_lrun/wolf_lrun_1.png</file>
+        <file>image/wolf_lrun/wolf_lrun_2.png</file>
+        <file>image/wolf_lrun/wolf_lrun_3.png</file>
+        <file>image/wolf_lrun/wolf_lrun_4.png</file>
+        <file>image/wolf_lrun/wolf_lrun_5.png</file>
+        <file>image/wolf_lrun/wolf_lrun_6.png</file>
+        <file>image/wolf_lrun/wolf_lrun_7.png</file>
+        <file>image/wolf_lrun/wolf_lrun_8.png</file>
+    </qresource>
+    <qresource prefix="/wolf_rrun">
+        <file>image/wolf_rrun/wolf_rrun_1.png</file>
+        <file>image/wolf_rrun/wolf_rrun_2.png</file>
+        <file>image/wolf_rrun/wolf_rrun_3.png</file>
+        <file>image/wolf_rrun/wolf_rrun_4.png</file>
+        <file>image/wolf_rrun/wolf_rrun_5.png</file>
+        <file>image/wolf_rrun/wolf_rrun_6.png</file>
+        <file>image/wolf_rrun/wolf_rrun_7.png</file>
+        <file>image/wolf_rrun/wolf_rrun_8.png</file>
     </qresource>
 </RCC>

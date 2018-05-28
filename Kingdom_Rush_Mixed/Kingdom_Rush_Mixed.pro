@@ -29,7 +29,9 @@ SOURCES += \
     abstract_obj.cpp \
     live_player.cpp \
     princess.cpp \
-    enemy_monster.cpp
+    enemy_monster.cpp \
+    iceball.cpp \
+    thrown_obj.cpp
 
 HEADERS += \
         window.h \
@@ -37,7 +39,9 @@ HEADERS += \
     live_player.h \
     princess.h \
     enemy_monster.h \
-    constant.h
+    constant.h \
+    iceball.h \
+    thrown_obj.h
 
 FORMS += \
         window.ui

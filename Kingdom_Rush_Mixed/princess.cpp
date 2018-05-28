@@ -15,13 +15,15 @@ static const char *dir_set[]=
      ":/princess/image/princess/lmove1.png",
      ":/princess/image/princess/rmove1.png"
     };
-static const QPoint rlocation=QPoint(64,136);
-static const QPoint rheart=QPoint(64,110);
-const int hurtable_range=30;
-const int attack_range=200;
-const int MAXHP=400;
-const int img_num=12;
-const int speed=10;
+static const QPoint rlocation=QPoint(42,67);
+static const QPoint rheart=QPoint(42,44);
+static const QPoint l_riceball=QPoint(-23,-45);
+static const QPoint r_riceball=QPoint(23,-45);
+static const int hurtable_range=30;
+static const int attack_range=200;
+static const int MAXHP=400;
+static const int img_num=12;
+static const int speed=10;
 //注意：每增加一次图片，对应在头文件Condition对应位置要写上状态
 //并且更新img_num
 //照片顺序最好符合逻辑
@@ -85,10 +87,12 @@ void Princess::react(Command cmd)
 
 void Princess::draw(QPainter &p)
 {
-    Abstract_obj::draw(p,_condition);
-//    if(_condition==l_longattack3||_condition==r_longattack3)
-//        emit response(Signal::iceball);
+    drawImage(p,_condition);
     if(isStanding()) return;
+    if(_condition==l_longattack3)
+        emit iceball(getObj_location()+l_riceball);
+    else if(_condition==r_longattack3)
+        emit iceball(getObj_location()+r_riceball);
     if(_condition>=l_longattack1&&_condition<l_longattack4)
         _condition=Condition(1+_condition);
     else if(_condition==l_longattack4)
@@ -126,4 +130,11 @@ void Princess::draw(QPainter &p)
             move();
         }
     }
+}
+
+bool Princess::hurtedBy(Thrown_obj &obj)
+{
+    if(!Live_player::hurtedBy(obj)) return false;
+    else reduceHP(10);
+    return true;
 }

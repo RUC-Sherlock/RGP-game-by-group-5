@@ -8,8 +8,8 @@
 class Princess : public Live_player
 {
     Q_OBJECT
-//signals:
-//    void response(Signal);
+signals:
+    void iceball(const QPoint &);
 public:
     Princess(int xpos, int ypos);
     Princess(const QPoint & obj_location);
@@ -19,6 +19,8 @@ public:
     bool isStanding(void)const {return _condition<l_longattack1;}
     bool isMoving(void)const {return _condition==rmove1||_condition==lmove1;}
     bool isRight(void)const {return !isLeft();}
+    bool hurtedBy(Thrown_obj &obj);
+    void process(const Live_player &obj){}
 private:
     enum Condition{lstand1,rstand1,l_longattack1,l_longattack2,
         l_longattack3,l_longattack4,r_longattack1,r_longattack2,

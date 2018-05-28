@@ -1,19 +1,7 @@
 #include "enemy_monster.h"
 #include <QPoint>
 
-enum Route{map1_1,map1_2,map1_3,map2_1,map2_2,map3_1,map3_2,map3_3,map3_4};
 
-static const QPoint destination[9][4]=
-{{QPoint(1152,228),QPoint(950,430),QPoint(293,427),QPoint(0,562)},
- {QPoint(1020,497),QPoint(760,497),QPoint(380,497),QPoint(0,497)},
- {QPoint(985,625),QPoint(776,625),QPoint(385,625),QPoint(0,582)},
- {QPoint(918,322),QPoint(696,382),QPoint(172,327),QPoint(0,397)},
- {QPoint(995,716),QPoint(644,812),QPoint(301,728),QPoint(0,741)},
- {QPoint(445,190),QPoint(426,411),QPoint(205,545),QPoint(0,520)},
- {QPoint(882,266),QPoint(834,441),QPoint(432,412),QPoint(0,515)},
- {QPoint(911,624),QPoint(847,468),QPoint(442,422),QPoint(0,533)},
- {QPoint(900,844),QPoint(630,683),QPoint(605,378),QPoint(0,522)}
-};
 static const char *dir_set[]=
     {":/enemy_monster/image/enemy_monster/l_walk (1).png",
      ":/enemy_monster/image/enemy_monster/l_walk (1).png",
@@ -56,15 +44,33 @@ static const char *dir_set[]=
      ":/enemy_monster/image/enemy_monster/l_attack (5).png",
      ":/enemy_monster/image/enemy_monster/l_attack (6).png",
      ":/enemy_monster/image/enemy_monster/l_attack (6).png",
-     ":/enemy_monster/image/enemy_monster/l_attack (6).png"
+     ":/enemy_monster/image/enemy_monster/l_attack (6).png",
+     ":/enemy_monster/image/enemy_monster/r_attack1.png",
+     ":/enemy_monster/image/enemy_monster/r_attack1.png",
+     ":/enemy_monster/image/enemy_monster/r_attack1.png",
+     ":/enemy_monster/image/enemy_monster/r_attack2.png",
+     ":/enemy_monster/image/enemy_monster/r_attack2.png",
+     ":/enemy_monster/image/enemy_monster/r_attack2.png",
+     ":/enemy_monster/image/enemy_monster/r_attack3.png",
+     ":/enemy_monster/image/enemy_monster/r_attack3.png",
+     ":/enemy_monster/image/enemy_monster/r_attack3.png",
+     ":/enemy_monster/image/enemy_monster/r_attack4.png",
+     ":/enemy_monster/image/enemy_monster/r_attack4.png",
+     ":/enemy_monster/image/enemy_monster/r_attack4.png",
+     ":/enemy_monster/image/enemy_monster/r_attack5.png",
+     ":/enemy_monster/image/enemy_monster/r_attack5.png",
+     ":/enemy_monster/image/enemy_monster/r_attack5.png",
+     ":/enemy_monster/image/enemy_monster/r_attack6.png",
+     ":/enemy_monster/image/enemy_monster/r_attack6.png",
+     ":/enemy_monster/image/enemy_monster/r_attack6.png"
     };
 static const QPoint rlocation=QPoint(72,106);
 static const QPoint rheart=QPoint(72,68);
 //图片大小为146*120
-static const int hurtable_range=50;
-static const int attack_range=250;//？瞎写的，再调
-static const int MAXHP=20;//同瞎写
-static const int img_num=42;
+static const int hurtable_range=30;
+static const int attack_range=150;//？瞎写的，再调
+static const int MAXHP=300;//同瞎写
+static const int img_num=60;
 static const int speed=3;
 static const QPoint des=destination[map1_1][0];
 
@@ -75,6 +81,34 @@ Enemy_monster::Enemy_monster(int xpos, int ypos):
 Enemy_monster::Enemy_monster(const QPoint & obj_location):
     Live_player(obj_location,rlocation,rheart,img_num,dir_set,hurtable_range,attack_range,MAXHP,speed,des),
     _condition(l_walk1_1),point_destination(0),_sleep(0){}
+
+
+void Enemy_monster::process(const Live_player & obj)
+{
+    //在你自己的process里面私人定制你想要的处理方案
+    //此时也未必需要react函数了
+    //因为process是你自己的类的函数
+    //在你自己的类里就都是你自己的东西
+    //不需要像react考虑window.cpp和你的类的交互问题
+    //你自己想抽取obj什么信息就提取
+    //想判断什么就判断什么
+    //想研发什么技能就研发什么技能
+    //下面我还是把window.cpp里面你的处理方法搬到了这里
+    //你甚至可以不需要react函数 直接根据obj和你的对象的关系
+    //改变condition
+    if(inAttack_range(obj))
+    {
+        connect(this,SIGNAL(attack(int)),&obj,SLOT(reduceHP(int)),Qt::UniqueConnection);
+        if(inMyLeft(obj))
+            react(Command::Lattack);
+        else react(Command::Rattack);
+    }
+    else
+    {
+        disconnect(this,SIGNAL(attack(int)),&obj,SLOT(reduceHP(int)));
+        react(Command::Lwalk);
+    }
+}
 
 void Enemy_monster::react(Command cmd)
 {
@@ -90,12 +124,37 @@ void Enemy_monster::react(Command cmd)
             //移动中无法进攻
             if(_condition<l_attack1_1)
                 _condition=l_attack1_1;
-            else
+            else if(_condition>=l_attack1_1&&_condition<=l_attack6_3)
             {
                 if(_condition>=l_attack1_1&&_condition<l_attack6_3)
                     _condition=Condition(1+_condition);
                 else
                     _condition=l_attack1_1;
+            }
+            else if(_condition>=r_attack1_1&&_condition<=r_attack6_3)
+            {
+                if(_condition>=r_attack1_1&&_condition<r_attack6_3)
+                    _condition=Condition(1+_condition);
+                else
+                    _condition=l_attack1_1;
+            }
+            break;
+        case Command::Rattack:
+            if(_condition<l_attack1_1)
+                _condition=r_attack1_1;
+            else if(_condition>=r_attack1_1&&_condition<=r_attack6_3)
+            {
+                if(_condition>=r_attack1_1&&_condition<r_attack6_3)
+                    _condition=Condition(1+_condition);
+                else
+                    _condition=r_attack1_1;
+            }
+            else if(_condition>=l_attack1_1&&_condition<=l_attack6_3)
+            {
+                if(_condition>=l_attack1_1&&_condition<l_attack6_3)
+                    _condition=Condition(1+_condition);
+                else
+                    _condition=r_attack1_1;
             }
             break;
         default:
@@ -103,10 +162,11 @@ void Enemy_monster::react(Command cmd)
     }
 }
 
+
 void Enemy_monster::draw(QPainter &p)
 {
-    Abstract_obj::draw(p,_condition);
-    _sleep=(_sleep+1)%20;
+    drawImage(p,_condition);
+    _sleep=(_sleep+1)%16;
     if(isWalking())
     {
         int dx=getDx();
@@ -119,12 +179,33 @@ void Enemy_monster::draw(QPainter &p)
                 point_destination++;
                 setDestination(destination[map1_1][point_destination]);
             }
-            /*if(_condition==l_walk1)_condition=l_walk2;
-            else _condition=l_walk1;*/
-
         }
-        if(_sleep) return;
+        if(_sleep%8) return;
         move();
     }
+
+    else if(_condition==l_attack3_1||_condition==r_attack3_1)
+    {
+        emit attack(50);
+    }
+    //注意弄清楚_condition满足什么状态发送信号比较合适
 }
+
+bool Enemy_monster::isWalking(void)const
+{
+    if(_condition>=l_walk1_1&&_condition<=l_walk12_2)
+        return true;
+    else
+        return false;
+}
+
+
+
+bool Enemy_monster::hurtedBy(Thrown_obj &obj)
+{
+    if(!Live_player::hurtedBy(obj)) return false;
+    else reduceHP(10);
+    return true;
+}
+
 
