@@ -1,0 +1,85 @@
+<RCC>
+    <qresource prefix="/background">
+        <file>image/map/1.png</file>
+        <file>image/map/2.png</file>
+        <file>image/map/3.png</file>
+    </qresource>
+    <qresource prefix="/princess">
+        <file>image/princess/l_longattack1.png</file>
+        <file>image/princess/l_longattack2.png</file>
+        <file>image/princess/l_longattack3.png</file>
+        <file>image/princess/l_longattack4.png</file>
+        <file>image/princess/r_longattack1.png</file>
+        <file>image/princess/r_longattack2.png</file>
+        <file>image/princess/r_longattack3.png</file>
+        <file>image/princess/r_longattack4.png</file>
+        <file>image/princess/lstand1.png</file>
+        <file>image/princess/rstand1.png</file>
+        <file>image/princess/lmove1.png</file>
+        <file>image/princess/rmove1.png</file>
+    </qresource>
+    <qresource prefix="/enemy_monster">
+        <file>image/enemy_monster/l_attack (1).png</file>
+        <file>image/enemy_monster/l_attack (2).png</file>
+        <file>image/enemy_monster/l_attack (3).png</file>
+        <file>image/enemy_monster/l_attack (4).png</file>
+        <file>image/enemy_monster/l_walk (1).png</file>
+        <file>image/enemy_monster/l_walk (2).png</file>
+        <file>image/enemy_monster/l_walk (3).png</file>
+        <file>image/enemy_monster/l_walk (4).png</file>
+        <file>image/enemy_monster/l_walk (5).png</file>
+        <file>image/enemy_monster/l_walk (6).png</file>
+        <file>image/enemy_monster/l_walk (7).png</file>
+        <file>image/enemy_monster/l_walk (8).png</file>
+        <file>image/enemy_monster/l_walk (9).png</file>
+        <file>image/enemy_monster/l_walk (10).png</file>
+        <file>image/enemy_monster/l_walk (11).png</file>
+        <file>image/enemy_monster/l_walk (12).png</file>
+        <file>image/enemy_monster/r_attack1.png</file>
+        <file>image/enemy_monster/r_attack2.png</file>
+        <file>image/enemy_monster/r_attack3.png</file>
+        <file>image/enemy_monster/r_attack4.png</file>
+        <file>image/enemy_monster/death (1).png</file>
+        <file>image/enemy_monster/death (2).png</file>
+        <file>image/enemy_monster/death (3).png</file>
+        <file>image/enemy_monster/death (4).png</file>
+        <file>image/enemy_monster/death (5).png</file>
+        <file>image/enemy_monster/death (6).png</file>
+        <file>image/enemy_monster/death (7).png</file>
+        <file>image/enemy_monster/l_attack5_1.png</file>
+        <file>image/enemy_monster/l_attack5_2.png</file>
+        <file>image/enemy_monster/l_attack5_3.png</file>
+        <file>image/enemy_monster/l_attack6_1.png</file>
+        <file>image/enemy_monster/l_attack6_2.png</file>
+        <file>image/enemy_monster/l_attack6_3.png</file>
+        <file>image/enemy_monster/r_attack5_1.png</file>
+        <file>image/enemy_monster/r_attack5_2.png</file>
+        <file>image/enemy_monster/r_attack5_3.png</file>
+        <file>image/enemy_monster/r_attack6_1.png</file>
+        <file>image/enemy_monster/r_attack6_2.png</file>
+        <file>image/enemy_monster/r_attack6_3.png</file>
+    </qresource>
+    <qresource prefix="/others">
+        <file>image/others/iceball.png</file>
+    </qresource>
+    <qresource prefix="/wolf_lrun">
+        <file>image/wolf_lrun/wolf_lrun_1.png</file>
+        <file>image/wolf_lrun/wolf_lrun_2.png</file>
+        <file>image/wolf_lrun/wolf_lrun_3.png</file>
+        <file>image/wolf_lrun/wolf_lrun_4.png</file>
+        <file>image/wolf_lrun/wolf_lrun_5.png</file>
+        <file>image/wolf_lrun/wolf_lrun_6.png</file>
+        <file>image/wolf_lrun/wolf_lrun_7.png</file>
+        <file>image/wolf_lrun/wolf_lrun_8.png</file>
+    </qresource>
+    <qresource prefix="/wolf_rrun">
+        <file>image/wolf_rrun/wolf_rrun_1.png</file>
+        <file>image/wolf_rrun/wolf_rrun_2.png</file>
+        <file>image/wolf_rrun/wolf_rrun_3.png</file>
+        <file>image/wolf_rrun/wolf_rrun_4.png</file>
+        <file>image/wolf_rrun/wolf_rrun_5.png</file>
+        <file>image/wolf_rrun/wolf_rrun_6.png</file>
+        <file>image/wolf_rrun/wolf_rrun_7.png</file>
+        <file>image/wolf_rrun/wolf_rrun_8.png</file>
+    </qresource>
+</RCC>
