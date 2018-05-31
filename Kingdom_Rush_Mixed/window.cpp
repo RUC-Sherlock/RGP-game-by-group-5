@@ -38,12 +38,12 @@ static void deleteIt(std::forward_list<T> &mylist)
 Window::Window(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Window),princess(54,531),
-    _background(":/background/image/map/1.png")
+    _background(background[map1])
 {
     ui->setupUi(this);
     setMouseTracking(true);
-    enemy.push_front(new Enemy_monster(1200,246));
-    //enemy.push_front(new Enemy_wolf(1156,490));
+    enemy.push_front(new Enemy_monster(map1_1));
+    enemy.push_front(new Enemy_wolf(map1_2));
     QObject::startTimer(25);
     connect(&princess,SIGNAL(iceball(QPoint)),this,SLOT(emit_iceball(QPoint)),Qt::UniqueConnection);
 }

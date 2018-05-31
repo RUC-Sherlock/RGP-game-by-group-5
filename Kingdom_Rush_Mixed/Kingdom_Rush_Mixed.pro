@@ -31,7 +31,10 @@ SOURCES += \
     princess.cpp \
     enemy_monster.cpp \
     iceball.cpp \
-    thrown_obj.cpp
+    thrown_obj.cpp \
+    enemy_wolf.cpp \
+    constant.cpp \
+    background.cpp
 
 HEADERS += \
         window.h \
@@ -41,7 +44,9 @@ HEADERS += \
     enemy_monster.h \
     constant.h \
     iceball.h \
-    thrown_obj.h
+    thrown_obj.h \
+    enemy_wolf.h \
+    background.h
 
 FORMS += \
         window.ui

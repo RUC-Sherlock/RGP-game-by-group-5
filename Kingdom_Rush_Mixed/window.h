@@ -11,7 +11,7 @@
 #include "enemy_monster.h"
 #include "princess.h"
 #include "iceball.h"
-//#include "enemy_wolf.h"
+#include "enemy_wolf.h"
 
 namespace Ui {
 class Window;
